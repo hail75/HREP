@@ -3,7 +3,7 @@ import scrapy
 class HREPSpider(scrapy.Spider):
     name = 'hrep'
     allowed_domains = ['nhadat24h.net']
-    start_urls = [f'https://nhadat24h.net/nha-dat-ban-ha-noi/page{i}' for i in range(1, 2270)]
+    start_urls = [f'https://nhadat24h.net/nha-dat-ban-ha-noi/page{i}' for i in range(1, 2236)]
 
     def parse(self, response):
         for item in response.xpath('//div[@class="dv-item"]'):
